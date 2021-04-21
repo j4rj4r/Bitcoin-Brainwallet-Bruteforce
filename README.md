@@ -20,3 +20,7 @@ Or you can define another dictionary to use.
 ```
 python3 main.py -i anotherdict.txt
 ```
+If you want to use compressed addresses
+```
+python3 main.py -c
+```
