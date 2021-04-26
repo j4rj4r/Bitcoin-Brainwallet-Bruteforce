@@ -14,7 +14,7 @@ if __name__ == '__main__':
                         type=str, required=False)
     parser.add_argument('-o', '--output', help='output file (e.g. output.txt)',
                         type=str, required=False)
-    parser.add_argument('-c', '--compressed', help="Use compressed addresses", required=False)
+    parser.add_argument('-c', '--compressed', help="Use compressed addresses", action='store_true', required=False)
     parser.add_argument('--version', action='version', version='Version : 1.01')
 
     args = parser.parse_args()
@@ -34,6 +34,7 @@ if __name__ == '__main__':
     try:
 
         if args.compressed:
+            print('Compressed Addresses : ON')
             result = scan.launch(compressed=True)
         else:
             result = scan.launch()
